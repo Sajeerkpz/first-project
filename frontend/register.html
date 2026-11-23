@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | Self Study</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Self Study</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+  <main class="auth-container">
+    <section class="glass-card">
+      <h1>Create account</h1>
+      <p class="form-intro">Join Self Study and start building your skills.</p>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" class="form-control" autocomplete="name" required maxlength="100">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-control" autocomplete="email" required maxlength="254">
+        </div>
+        <div class="form-group">
+          <label for="password">Password (at least 8 characters)</label>
+          <input type="password" id="password" name="password" class="form-control" autocomplete="new-password" required minlength="8" maxlength="72">
+        </div>
+        <p class="form-message" id="form-message" role="alert" aria-live="polite"></p>
+        <button type="submit" class="btn btn-primary form-submit">Register</button>
+      </form>
+      <p class="auth-link">Have an account? <a href="login.html">Login here</a></p>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

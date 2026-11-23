@@ -1,0 +1,22 @@
+Self Study Platform - How to Run
+
+Option 1: Recommended (Python)
+1. Open a terminal in the project root.
+2. Install dependencies:
+   pip install -r requirements.txt
+3. Start the app:
+   python app.py
+4. Open in a browser:
+   http://localhost:8080
+
+Option 2: Run directly with the backend entry script
+1. Open a terminal in the project root.
+2. Run:
+   python run.py
+3. Open:
+   http://localhost:8080
+
+Notes:
+- The backend uses SQLite by default, so no extra database setup is required.
+- The app will serve the frontend directly from the backend.
+- If you want to test the API manually, use the examples in the README.md file.

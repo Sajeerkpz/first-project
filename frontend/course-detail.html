@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course | Self Study</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Self Study</a>
+    <div class="nav-links">
+      <a href="courses.html">Courses</a>
+      <a class="signed-in-link" href="dashboard.html" hidden>Dashboard</a>
+      <div class="guest-only"><a href="login.html" class="btn btn-outline">Login</a><a href="register.html" class="btn btn-primary">Register</a></div>
+      <div class="auth-only" hidden><span id="welcome-user"></span><button id="logout-btn" class="btn btn-outline" type="button">Logout</button></div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+  <main class="page-shell">
+    <a class="back-link" href="courses.html">← All courses</a>
+    <p id="course-message" class="status-message" role="status">Loading course…</p>
+    <article id="course-detail" hidden>
+      <header class="course-hero">
+        <p id="course-meta" class="eyebrow"></p>
+        <h1 id="course-title"></h1>
+        <p id="course-description"></p>
+        <div class="course-actions">
+          <button id="enroll-button" class="btn btn-primary" type="button" hidden>Enroll in this course</button>
+          <a id="login-to-enroll" class="btn btn-primary" href="login.html" hidden>Log in to enroll</a>
+          <a id="dashboard-link" class="btn btn-outline" href="dashboard.html" hidden>View my dashboard</a>
+        </div>
+      </header>
+      <section class="lesson-section">
+        <div class="section-title">
+          <div><p class="eyebrow">Course outline</p><h2>Lessons</h2></div>
+          <p id="course-progress"></p>
+        </div>
+        <ol id="lesson-list" class="lesson-list"></ol>
+      </section>
+    </article>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/course-detail.js"></script>
+</body>
+</html>

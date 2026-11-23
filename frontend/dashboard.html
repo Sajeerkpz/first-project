@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Self Study</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Self Study</a>
+    <div class="nav-links">
+      <a href="courses.html">Courses</a>
+      <a href="dashboard.html">Dashboard</a>
+      <div class="auth-only"><span id="welcome-user"></span><button id="logout-btn" class="btn btn-outline" type="button">Logout</button></div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+  <main class="page-shell">
+    <header class="page-heading">
+      <p class="eyebrow">Your learning</p>
+      <h1 id="dashboard-title">Dashboard</h1>
+      <p>Pick up where you left off and see your progress.</p>
+    </header>
+    <p id="dashboard-message" class="status-message" role="status">Loading your courses…</p>
+    <section id="dashboard-courses" class="course-grid" aria-live="polite"></section>
+    <section id="empty-dashboard" class="empty-state" hidden>
+      <h2>No courses yet</h2>
+      <p>Explore the course library and enroll in something you want to learn.</p>
+      <a href="courses.html" class="btn btn-primary">Browse courses</a>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses | Self Study</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Self Study</a>
+    <div class="nav-links">
+      <a href="courses.html">Courses</a>
+      <a class="signed-in-link" href="dashboard.html" hidden>Dashboard</a>
+      <div class="guest-only">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <div class="auth-only" hidden><span id="welcome-user"></span><button id="logout-btn" class="btn btn-outline" type="button">Logout</button></div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+  <main class="page-shell">
+    <header class="page-heading">
+      <p class="eyebrow">Learning library</p>
+      <h1>Explore courses</h1>
+      <p>Choose a path, enroll, and keep track of each lesson as you learn.</p>
+    </header>
+    <div class="course-filters">
+      <label class="sr-only" for="course-search">Search courses</label>
+      <input id="course-search" class="form-control" type="search" placeholder="Search courses">
+      <label class="sr-only" for="category-filter">Filter by category</label>
+      <select id="category-filter" class="form-control"><option value="">All categories</option></select>
+    </div>
+    <p id="courses-message" class="status-message" role="status"></p>
+    <section id="course-grid" class="course-grid" aria-live="polite"></section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/courses.js"></script>
+</body>
+</html>

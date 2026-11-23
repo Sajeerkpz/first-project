@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A focused platform for learning in-demand skills.">
+  <title>Self Study</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="glass-nav">
+    <a href="index.html" class="logo">Self Study</a>
+    <div class="nav-links">
+      <a href="courses.html">Courses</a>
+      <a class="signed-in-link" href="dashboard.html" hidden>Dashboard</a>
+      <div class="guest-only">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <div class="auth-only" hidden>
+        <span id="welcome-user"></span>
+        <button id="logout-btn" class="btn btn-outline" type="button">Logout</button>
+      </div>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </nav>
+  <main>
+    <header class="hero">
+      <p class="eyebrow">Learn at your own pace</p>
+      <h1>Master <span>in-demand skills</span></h1>
+      <p>Build your knowledge in programming, cloud, and DevOps—one focused lesson at a time.</p>
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary">Get started</a>
+        <a href="#courses" class="btn btn-outline">Explore courses</a>
+      </div>
+    </header>
+    <section id="courses" class="home-courses page-shell">
+      <div class="section-title">
+        <div><p class="eyebrow">Start learning</p><h2>Popular courses</h2></div>
+        <a href="courses.html" class="btn btn-outline">View all courses</a>
+      </div>
+      <p id="featured-message" class="status-message">Loading courses…</p>
+      <div id="featured-courses" class="course-grid"></div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

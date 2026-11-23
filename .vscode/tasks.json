@@ -1,0 +1,57 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Verify Self Study backend with Maven",
+			"type": "shell",
+			"command": "mvn",
+			"args": [
+				"-f",
+				"backend\\pom.xml",
+				"test"
+			],
+			"isBackground": false,
+			"group": "build"
+		},
+		{
+			"label": "Run self-study web app",
+			"type": "shell",
+			"command": "python -m pip install -r requirements.txt; if ($?) { python app.py }",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Check Python versions",
+			"type": "shell",
+			"command": "py -0p",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run web app (Python 3.14)",
+			"type": "shell",
+			"command": "py -3.14 -m pip install -r requirements.txt; if ($?) { py -3.14 app.py }",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Install Python 3.14 deps and run app",
+			"type": "shell",
+			"command": "py -3.14 -m ensurepip --upgrade; py -3.14 -m pip install -r requirements.txt; if ($?) { py -3.14 app.py }",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Launch self-study web app",
+			"type": "shell",
+			"command": "py -3.14 app.py",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
